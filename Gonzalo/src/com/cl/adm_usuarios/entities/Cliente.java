@@ -13,16 +13,14 @@ public class Cliente extends Usuario implements Asesoria{
 	private String comuna;
 	private int edad;
 	enum Sist_salud {
-	    FONASA,
-	    ISAPRE
+	    FONASA,ISAPRE
 	  }
 	
 	public Cliente(){
 		
 	}
 	
-	public Cliente(int rut, String nombres, String apellidos, int telefono, String afp, String direccion, String comuna,
-			int edad) {
+	public Cliente(int rut, String nombres, String apellidos, int telefono, String afp, String direccion, String comuna, int edad) {
 		super();
 		this.rut = rut;
 		this.nombres = nombres;

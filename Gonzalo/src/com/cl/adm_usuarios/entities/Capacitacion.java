@@ -7,16 +7,26 @@ package com.cl.adm_usuarios.entities;
 		private String lugar;
 		private String durecion;
 		private int cant_asist;
-		enum dia{
-			LUNES,MARTES,MIERCOLES,JUEVES,VIERNES,SABADO,DOMINGO
+				
+		public enum DiasSemanda{
+			Lunes,Martes,Miercoles,Jueves,Viernes,Sabado,Domingo
+		}
+		
+		private DiasSemanda diasSemana;
+
+		public DiasSemanda getDiasSemana() {
+		   return this.diasSemana;
+		}
+
+		public void setDiasSemana(DiasSemanda diasSemana) {
+		   this.diasSemana = diasSemana;
 		}
 		
 		public Capacitacion() {
 			
 		}
 		
-		public Capacitacion(int indentificador, int rut_cliente, String hora, String lugar, String durecion,
-				int cant_asist) {
+		public Capacitacion(int indentificador, int rut_cliente, String hora, String lugar, String durecion, int cant_asist) {
 			super();
 			this.indentificador = indentificador;
 			this.rut_cliente = rut_cliente;
@@ -67,5 +77,8 @@ package com.cl.adm_usuarios.entities;
 			this.cant_asist = cant_asist;
 		}
 		
+		public void mostrarDetalle() {
+			System.out.println("La capacitación será en" + this.getLugar() + " a las " + this.getHora() + " del día " + this.getDiasSemana() +", y durará " + this.getDurecion() + " minutos");
+		}
 		
 	}
