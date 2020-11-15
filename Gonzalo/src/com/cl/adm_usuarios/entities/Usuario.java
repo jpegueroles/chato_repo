@@ -4,7 +4,9 @@ import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
 
-public class Usuario {
+import com.cl.adm_usuarios.interfaces.Asesoria;
+
+public class Usuario implements Asesoria{
 	
 	private String nombre;
 	private String fcha_nac;
@@ -44,14 +46,20 @@ public class Usuario {
 	public void setRun(int run) {
 		this.run = run;
 	}
+	
 	public void mostrarEdad() {
 		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		LocalDate fcha_nac = LocalDate.parse("15/08/1993", fmt);
+		LocalDate fcha_nac = LocalDate.parse(this.getFcha_nac(), fmt);
 		LocalDate ahora = LocalDate.now();
 
 		Period periodo = Period.between(fcha_nac, ahora);
-		System.out.printf("Tu edad es: %s años, %s meses y %s días",
-		                    periodo.getYears(), periodo.getMonths(), periodo.getDays());
-		
+		System.out.printf("Tu edad es: %s anios, %s meses y %s dias",
+		                    periodo.getYears(), periodo.getMonths(), periodo.getDays());	
 	}
+	
+	public void analizarUsuario(){
+		System.out.printf("Nombre: ", this.getNombre());
+		System.out.printf("RUN: ", this.getRun());
+	}
+	
 }

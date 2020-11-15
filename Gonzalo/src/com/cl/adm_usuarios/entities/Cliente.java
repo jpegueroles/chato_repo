@@ -1,6 +1,8 @@
 package com.cl.adm_usuarios.entities;
 
-public class Cliente extends Usuario{
+import com.cl.adm_usuarios.interfaces.Asesoria;
+
+public class Cliente extends Usuario implements Asesoria{
 	
 	private int	rut;
 	private String nombres;
@@ -89,4 +91,25 @@ public class Cliente extends Usuario{
 		this.edad = edad;
 	}
 	
+	//METODOS
+	
+	public String obtenerNombre() {	
+		String full = this.getNombres() + " " + this.getApellidos();
+		return full;
+	}
+	
+	public void obtenerSistemaSalud(int valor){
+		switch (valor) {
+			case 1: {
+				System.out.printf(Sist_salud.FONASA.toString());
+			}
+			case 2: {
+				System.out.printf(Sist_salud.ISAPRE.toString());
+			}
+		}
+	}
+	
+	public void analizarUsuario(){
+		
+	}
 }
