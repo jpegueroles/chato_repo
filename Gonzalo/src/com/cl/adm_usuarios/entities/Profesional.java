@@ -1,6 +1,8 @@
 package com.cl.adm_usuarios.entities;
 
-public class Profesional extends Usuario{
+import com.cl.adm_usuarios.interfaces.Asesoria;
+
+public class Profesional extends Usuario implements Asesoria{
 
 	 private String titulo;
 	 private String fechangreso;
@@ -38,6 +40,14 @@ public class Profesional extends Usuario{
 	@Override
 	public String toString() {
 		return "Profesional [titulo=" + titulo + ", fechangreso=" + fechangreso + "]";
+	}
+
+	@Override
+	public void analizarUsuario() {
+		// TODO Auto-generated method stub
+		super.analizarUsuario();
+		System.out.println("Titulo :"+ this.getTitulo());
+		System.out.println("Titulo :"+ this.getFechangreso());
 	}
 	 
 	
