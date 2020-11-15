@@ -1,5 +1,9 @@
 package com.cl.adm_usuarios.entities;
 
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
 public class Usuario {
 	
 	private String nombre;
@@ -40,5 +44,14 @@ public class Usuario {
 	public void setRun(int run) {
 		this.run = run;
 	}
-	
+	public void mostrarEdad() {
+		DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		LocalDate fcha_nac = LocalDate.parse("15/08/1993", fmt);
+		LocalDate ahora = LocalDate.now();
+
+		Period periodo = Period.between(fcha_nac, ahora);
+		System.out.printf("Tu edad es: %s años, %s meses y %s días",
+		                    periodo.getYears(), periodo.getMonths(), periodo.getDays());
+		
+	}
 }
