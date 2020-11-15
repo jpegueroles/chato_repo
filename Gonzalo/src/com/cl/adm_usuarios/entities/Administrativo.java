@@ -1,6 +1,8 @@
 package com.cl.adm_usuarios.entities;
 
-public class Administrativo extends Usuario{
+import com.cl.adm_usuarios.interfaces.Asesoria;
+
+public class Administrativo extends Usuario implements Asesoria{
 	private String area;
 	private String expPrevia;
 	
@@ -38,5 +40,11 @@ public class Administrativo extends Usuario{
 	public String toString() {
 		return "Administrativo [area=" + area + ", expPrevia=" + expPrevia + "]";
 	}
-	
+
+	@Override
+	public void analizarUsuario() {
+		super.analizarUsuario();
+		System.out.println("Area: "+ this.getArea());
+		System.out.println("Experiencia: "+ this.getExpPrevia());
+	}
 }

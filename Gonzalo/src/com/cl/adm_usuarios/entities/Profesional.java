@@ -46,10 +46,9 @@ public class Profesional extends Usuario implements Asesoria{
 	public void analizarUsuario() {
 		// TODO Auto-generated method stub
 		super.analizarUsuario();
-		System.out.println("Titulo :"+ this.getTitulo());
-		System.out.println("Titulo :"+ this.getFechangreso());
+		System.out.println("Titulo: "+ this.getTitulo());
+		System.out.println("Fecha Ingreso: "+ this.getFechangreso());
 	}
 	 
-	
-	
+
 }
