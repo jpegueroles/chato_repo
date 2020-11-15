@@ -108,8 +108,13 @@ public class Cliente extends Usuario implements Asesoria{
 			}
 		}
 	}
-	
-	public void analizarUsuario(){
+
+	@Override
+	public void analizarUsuario() {
+		// TODO Auto-generated method stub
+		super.analizarUsuario();
 		
+		System.out.println("Direccion: "+ this.getDireccion().concat(",").concat(this.getComuna()));
 	}
+	
 }
