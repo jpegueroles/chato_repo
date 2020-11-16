@@ -61,5 +61,29 @@ public class Usuario implements Asesoria{
 		System.out.printf("Nombre: ", this.getNombre());
 		System.out.printf("RUN: ", this.getRun());
 	}
+
+	@Override
+	public void addCliente() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addProfesional() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addAdministrativo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eliminarUsuario() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
