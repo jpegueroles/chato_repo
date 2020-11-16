@@ -63,7 +63,7 @@ public class Usuario implements Asesoria{
 	}
 
 	@Override
-	public void addCliente() {
+	public void addCliente(int rut, String nombres, String apellidos, int telefono, String afp, String direccion, String comuna, int edad,	int isapre) {
 		// TODO Auto-generated method stub
 		
 	}

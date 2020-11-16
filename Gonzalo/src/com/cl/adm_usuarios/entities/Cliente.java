@@ -12,9 +12,12 @@ public class Cliente extends Usuario implements Asesoria{
 	private String direccion;
 	private String comuna;
 	private int edad;
-	enum Sist_salud {
+	
+	public enum Sist_salud {
 	    FONASA,ISAPRE
 	  }
+	private Sist_salud siSalud;
+	
 	
 	public Cliente(){
 		
@@ -40,6 +43,14 @@ public class Cliente extends Usuario implements Asesoria{
 				+ ", afp=" + afp + ", direccion=" + direccion + ", comuna=" + comuna + ", edad=" + edad + "]";
 	}
 
+	public Sist_salud getSiSalud() {
+		return siSalud;
+	}
+
+	public void setSiSalud(Sist_salud siSalud) {
+		this.siSalud = siSalud;
+	}
+	
 	public int getRut() {
 		return rut;
 	}	
